@@ -6823,6 +6823,7 @@ export class Lexer implements Module {
 						case SemanticTokenTypes.property: kind = SymbolKind.Property; break;
 						case SemanticTokenTypes.variable: if (token.ignore) break;
 						// fall through
+						case SemanticTokenTypes.module:
 						case SemanticTokenTypes.parameter: kind = SymbolKind.Variable; break;
 					}
 				} else {
